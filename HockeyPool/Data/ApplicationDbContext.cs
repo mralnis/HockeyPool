@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using HockeyPool.Data.Tournament;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace HockeyPool.Data
@@ -9,5 +10,9 @@ namespace HockeyPool.Data
             : base(options)
         {
         }
+
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<UserPrediction> UserPredictions { get; set; }
     }
 }
